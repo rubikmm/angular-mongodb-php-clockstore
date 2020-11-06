@@ -1,0 +1,15 @@
+<mat-toolbar>
+  <a id="logo" routerLink="/">Magazinul de ceasuri</a>
+  <span class="spacer"></span>
+  <button
+    mat-raised-button
+    color="primary"
+    [matBadge]="cosS.getListaCos().length"
+    matBadgePosition="before"
+    matBadgeColor="accent"
+    routerLink="/cos">
+
+      <mat-icon>shopping_cart</mat-icon>
+
+  </button>
+</mat-toolbar>

@@ -1,0 +1,19 @@
+<ul class="flex-container lista-de-produse">
+  <li class="produs" *ngFor="let prod of produse">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ prod.nume }}</mat-card-title>
+        <mat-card-subtitle>Tip: {{ prod.categorie }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="'./assets/'+prod.imagine" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          {{ prod.descriere }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button class="btn-cumpara" (click)="adaugaCos(prod.id, prod.nume, prod.pret, prod.taxe,'Produsul a fost adăugat în coș.', 'Închide')" mat-button matButtonColor="accent">CUMPĂRĂ</button>
+      </mat-card-actions>
+    </mat-card>
+  </li>
+</ul>
